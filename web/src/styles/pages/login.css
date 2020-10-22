@@ -112,9 +112,13 @@ footer a:hover {
   position: absolute;
   top: 4.88%;
   right: 2.99%;
-  
+  opacity: 1;
 }
 
 .login fieldset button.btn-back:hover {
   background:#D3E2E5;
+}
+
+.input-block input.active {
+  border: 1px solid #A1E9C5;
 }

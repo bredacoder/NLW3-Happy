@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiArrowLeft, FiCheck } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
 import Button from '../../../components/Button';
@@ -9,6 +9,8 @@ import '../../../styles/pages/login.css'
 
 function Login() {
   const { goBack } = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
 
@@ -26,7 +28,9 @@ function Login() {
 
           <div className="input-block">
             <label htmlFor="email">E-mail</label>
-            <input 
+            <input
+              className={ email ? 'active' : '' }
+              onChange={(e) => {setEmail(e.target.value)}}
               id="email"
             />
           </div>
@@ -34,6 +38,8 @@ function Login() {
           <div className="input-block">
             <label htmlFor="password">Senha</label>
             <input 
+              className={ password ? 'active' : '' }
+              onChange={(e) => {setPassword(e.target.value)}}
               id="password"
             />
           </div>
@@ -51,10 +57,13 @@ function Login() {
                 Lembrar-me
               </label>
             </div>
-            <Link to="">Esqueci minha senha</Link>
+            <Link to="forgot-password">Esqueci minha senha</Link>
           </footer>
 
-          <Button textButton={'Entrar'}/>
+          <Button 
+            active={email && password ? 'active' : ''} 
+            textButton={'Entrar'}
+          />
         </fieldset>
       </form>
 
