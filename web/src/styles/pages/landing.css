@@ -44,20 +44,42 @@
 
 .content-wrapper .location {
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 325px;
+  top: 10px;
 
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 30px;
 
   display: flex;
   flex-direction: column;
   
-  text-align: right;
+  text-align: left;
 }
 
 .content-wrapper .location strong {
   font-weight: 800;
+}
+
+.content-wrapper .enter-login {
+  position: absolute;
+  top: 12px;
+  right: 0;
+
+  text-decoration: none;
+  color: #fff;
+  background-color: #12D4E0;
+  border-radius: 20px;
+
+  padding: 13px 40px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.content-wrapper .enter-login:hover {
+  background: #96feff;
+  color: #15C3D6;
 }
 
 .content-wrapper .enter-app {
