@@ -1,6 +1,6 @@
 import React from 'react';
-import { FiCheck } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { FiArrowLeft, FiCheck } from 'react-icons/fi';
+import { Link, useHistory } from 'react-router-dom';
 import Button from '../../../components/Button';
 
 import DashboardHappy from '../../../components/DashboardHappy';
@@ -8,6 +8,8 @@ import DashboardHappy from '../../../components/DashboardHappy';
 import '../../../styles/pages/login.css'
 
 function Login() {
+  const { goBack } = useHistory();
+
   return (
 
     <main className="page-content">
@@ -16,6 +18,10 @@ function Login() {
       
       <form className="login">
         <fieldset>
+          <button type="button" className="btn-back"onClick={goBack}>
+            <FiArrowLeft size={24} color="#15C3D6" />
+          </button>
+
           <legend>Fazer login</legend>
 
           <div className="input-block">
